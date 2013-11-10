@@ -26,7 +26,7 @@
     
     self.view.backgroundColor = kUIColorCream;
     
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor greenColor]];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
     
     [self requestObjects];
 }
