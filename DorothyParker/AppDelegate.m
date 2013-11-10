@@ -22,23 +22,22 @@
 - (void)setupRestKit
 {
     
-    // RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBaseURL]];
-    // [manager.HTTPClient setDefaultHeader:@"Accept" value:RKMIMETypeJSON];
-    
     RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:kBaseURL]];
 
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
     manager.managedObjectStore = managedObjectStore;
+    
 
     RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
     [errorMapping addPropertyMapping:[RKAttributeMapping attributeMappingFromKeyPath:nil toKeyPath:@"errorMessage"]];
+    
     
     RKResponseDescriptor *errorDescription = [RKResponseDescriptor responseDescriptorWithMapping:errorMapping method:RKRequestMethodAny pathPattern:nil keyPath:@"error" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassClientError)];
     
     [manager addResponseDescriptorsFromArray:@[errorDescription]];
     
-    RKEntityMapping *recipeMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([Recipe class]) inManagedObjectStore:managedObjectStore];
+   RKEntityMapping *recipeMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([Recipe class]) inManagedObjectStore:managedObjectStore];
     
     [recipeMapping addAttributeMappingsFromDictionary:@{
         @"ingredients" : @"ingredients",
@@ -48,12 +47,14 @@
         @"title" : @"title"
         }];
     
-   
     [manager addResponseDescriptorsFromArray:@[
         
-    [RKResponseDescriptor responseDescriptorWithMapping:recipeMapping method:RKRequestMethodAny pathPattern:@"recipes.json" keyPath:@"results" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
-     
+   [RKResponseDescriptor responseDescriptorWithMapping:recipeMapping method:RKRequestMethodAny pathPattern:@"recipes.json" keyPath:@"recipes" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
+                                               
     ]]];
+    
+   
+    
     
     [managedObjectStore createPersistentStoreCoordinator];
     
