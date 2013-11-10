@@ -24,6 +24,8 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    self.view.backgroundColor = kUIColorCream;
+    
     [self.navigationController.navigationBar setBackgroundColor:[UIColor greenColor]];
     
     [self requestObjects];
@@ -108,8 +110,6 @@
 
     id sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     
-    NSLog(@" [sectionInfo numberOfObjects] : %i ", [sectionInfo numberOfObjects]);
-    
     return [sectionInfo numberOfObjects];
     
 }
@@ -124,7 +124,7 @@
     Recipe *recipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = recipe.title;
-    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = kUIColorCream;
     
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     

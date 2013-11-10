@@ -26,3 +26,9 @@
 // Constants
 #define kBaseURL         @"http://www.meladori.com/work/underthetable/" 
 #define kBaseImageURL    @"http://www.meladori.com/work/underthetable/images/" 
+
+// Colors
+#define kUIColorCream    [UIColor colorWithRed:0.98 green:0.992 blue:0.965 alpha:1.0] 
+
+
+
