@@ -1,0 +1,27 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+#endif
+
+// System Classes
+#import <Availability.h>
+#import <AFJSONRequestOperation.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIScreen+Retina.h"
+#import <RestKit/RestKit.h>
+
+// Mogenerator Classes
+#import "Recipe.h"
+
+// Constants
+#define kBaseURL         @"http://www.meladori.com/work/underthetable/" 
