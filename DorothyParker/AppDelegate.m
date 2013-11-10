@@ -41,7 +41,7 @@
     
     [recipeMapping addAttributeMappingsFromDictionary:@{
         @"ingredients" : @"ingredients",
-        @"recipedescription" : @"recipedescription",
+        @"description" : @"recipedescription",
         @"thumbnail" : @"thumbnail",
         @"thumbnail-retina" : @"thumbnailretina",
         @"title" : @"title"
@@ -52,8 +52,6 @@
    [RKResponseDescriptor responseDescriptorWithMapping:recipeMapping method:RKRequestMethodAny pathPattern:@"recipes.json" keyPath:@"recipes" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)
                                                
     ]]];
-    
-   
     
     
     [managedObjectStore createPersistentStoreCoordinator];
@@ -69,8 +67,6 @@
     [managedObjectStore createManagedObjectContexts];
     
     managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
-    
-    NSLog(@" managed object context : %@ ", [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext );
     
 }
 

@@ -11,13 +11,8 @@
 
 @interface RecipeTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *recipeArray;
-@property (nonatomic, strong) NSMutableArray *ingredientsArray;
-@property (nonatomic, strong) NSMutableArray *descriptionArray;
-@property (nonatomic, strong) NSMutableArray *thumbnailArray;
-@property (nonatomic, strong) NSMutableArray *thumbnailRetinaArray;
-@property (nonatomic, strong) NSString *imageBaseURL;
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic) NSString *imageBaseURL;
+@property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -29,22 +24,19 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.recipeArray = [NSMutableArray new];
-    self.descriptionArray = [NSMutableArray new];
-    self.ingredientsArray = [NSMutableArray new];
-    self.thumbnailArray = [NSMutableArray new];
-    self.thumbnailRetinaArray = [NSMutableArray new];
+    [self requestObjects];
+}
 
-    // [self loadJson];
+- (void)requestObjects
+{
     
     [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/plain"];
-
+    
     [[RKObjectManager sharedManager] getObjectsAtPath:@"recipes.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"success");
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error : %@" , error);
     }];
-
 }
 
 - (NSFetchedResultsController *)fetchedResultsController
@@ -56,15 +48,9 @@
         
         NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Recipe class])];
         
-        
-        // NSLog(@" managed object context : %@ ", [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext );
-        
         fetchRequest.sortDescriptors = @[];
         
-        // NSLog(@" fetchRequest : %@ " , fetchRequest );
-
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext sectionNameKeyPath:nil cacheName:nil];
-        
         
         NSError *error;
         
@@ -72,66 +58,11 @@
         
         [self.fetchedResultsController performFetch:&error];
         
-        NSLog(@"fetched objects : %@", [self.fetchedResultsController fetchedObjects]);
-        
         NSAssert(!error, @"Error performing fetch request: ", error);
         
     }
     
     return _fetchedResultsController;
-}
-    
-- (void)loadJson
-{
-    NSString *baseURLString = kBaseURL;
-
-    NSString *recipeUrl = [NSString stringWithFormat:@"%@recipes.json", baseURLString];
-    NSURL *url = [NSURL URLWithString:recipeUrl];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        
-        NSDictionary *dictionary = (NSDictionary *) JSON;
-        
-        self.imageBaseURL = [dictionary objectForKey:@"imageBaseURL"];
-        
-        NSArray *recipes = [dictionary objectForKey:@"recipes"];
-        [recipes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            
-            
-            NSString *title = [obj objectForKey:@"title"];
-            [self.recipeArray addObject:title];
-            
-            NSString *ingredients = [obj objectForKey:@"ingredients"];
-            [self.ingredientsArray addObject:ingredients];
-            
-            NSString *description = [obj objectForKey:@"description"];
-            [self.descriptionArray addObject:description];
-            
-            NSString *thumbnail = [NSString stringWithFormat:@"%@%@", self.imageBaseURL, [obj objectForKey:@"thumbnail"]];
-            [self.thumbnailArray addObject:thumbnail];
-            
-            NSString *thumbnailRetina = [NSString stringWithFormat:@"%@%@", self.imageBaseURL, [obj objectForKey:@"thumbnail-retina"]];
-            [self.thumbnailRetinaArray addObject:thumbnailRetina];
-            
-        }];
-        
-        NSLog(@"recipeArray : %@" , self.recipeArray );
-        NSLog(@"ingredientsArray : %@" , self.ingredientsArray );
-        NSLog(@"thumbnailArray: %@" , self.thumbnailArray  );
-
-
-        [self.tableView reloadData];
-    
-        
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"error : %@", [error localizedDescription]);
-    }];
-    
-    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/plain"]];
-    [operation start];
-    
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -141,14 +72,22 @@
         RecipeDetailViewController *recipeDetailViewController = [segue destinationViewController];
         NSInteger currentRow = [self.tableView indexPathForSelectedRow].row;
         
-        recipeDetailViewController.ingredients = [self.ingredientsArray objectAtIndex:currentRow];
-        recipeDetailViewController.description = [self.descriptionArray objectAtIndex:currentRow];
-        recipeDetailViewController.thumbnail = [self.thumbnailArray objectAtIndex:currentRow];
-        recipeDetailViewController.thumbnailRetina = [self.thumbnailRetinaArray objectAtIndex:currentRow];
-    
+        Recipe *selectedRecipe = [[self.fetchedResultsController fetchedObjects] objectAtIndex:currentRow];
+        
+        recipeDetailViewController.ingredients = selectedRecipe.ingredients;
+        recipeDetailViewController.recipedescription = selectedRecipe.recipedescription;
+        recipeDetailViewController.thumbnail = [NSString stringWithFormat:@"%@%@", kBaseURL, selectedRecipe.thumbnail];
+        recipeDetailViewController.thumbnailRetina = [NSString stringWithFormat:@"%@%@", kBaseURL, selectedRecipe.thumbnailretina];
+        
     }
 }
 
+# pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView reloadData];
+}
 
 # pragma mark - UITableView delegate methods
 
@@ -171,8 +110,6 @@
     
     return [sectionInfo numberOfObjects];
     
-    // return [sectionInfo numberOfObjects];
-
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -183,12 +120,6 @@
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     
     Recipe *recipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    // cell.textLabel.text = [self.recipeArray objectAtIndex:indexPath.row];
-    
-    NSLog(@"recipe.title : %@ " , recipe.title );
-  
-     
     
     cell.textLabel.text = recipe.title;
     

@@ -26,7 +26,7 @@
     NSString *ingredientsHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@", self.ingredients];
     [self.ingredientsWebView loadHTMLString:ingredientsHtmlString baseURL:nil];
     
-    NSString *descriptionHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@", self.description];
+    NSString *descriptionHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@", self.recipedescription];
     [self.descriptionWebView loadHTMLString:descriptionHtmlString baseURL:nil];
 }
 
