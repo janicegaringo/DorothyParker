@@ -25,3 +25,4 @@
 
 // Constants
 #define kBaseURL         @"http://www.meladori.com/work/underthetable/" 
+#define kBaseImageURL    @"http://www.meladori.com/work/underthetable/images/" 

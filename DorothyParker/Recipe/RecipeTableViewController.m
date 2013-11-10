@@ -76,10 +76,10 @@
         
         Recipe *selectedRecipe = [[self.fetchedResultsController fetchedObjects] objectAtIndex:currentRow];
         
-        recipeDetailViewController.ingredients = selectedRecipe.ingredients;
         recipeDetailViewController.recipedescription = selectedRecipe.recipedescription;
-        recipeDetailViewController.thumbnail = [NSString stringWithFormat:@"%@%@", kBaseURL, selectedRecipe.thumbnail];
-        recipeDetailViewController.thumbnailRetina = [NSString stringWithFormat:@"%@%@", kBaseURL, selectedRecipe.thumbnailretina];
+        recipeDetailViewController.ingredients = selectedRecipe.ingredients; 
+        recipeDetailViewController.thumbnail = [NSString stringWithFormat:@"%@%@", kBaseImageURL, selectedRecipe.thumbnail];
+        recipeDetailViewController.thumbnailRetina = [NSString stringWithFormat:@"%@%@", kBaseImageURL, selectedRecipe.thumbnailretina];
         
     }
 }

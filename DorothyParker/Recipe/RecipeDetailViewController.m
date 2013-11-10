@@ -23,10 +23,10 @@
         [self.thumbnailImageView setImageWithURL:[NSURL URLWithString:self.thumbnail]];
     }
     
-    NSString *ingredientsHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@", self.ingredients];
+    NSString *ingredientsHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@%@", self.ingredients, @"</font>"];
     [self.ingredientsWebView loadHTMLString:ingredientsHtmlString baseURL:nil];
     
-    NSString *descriptionHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@", self.recipedescription];
+    NSString *descriptionHtmlString = [NSString stringWithFormat:@"<font face='helvetica'>%@%@", self.recipedescription, @"</font>"];
     [self.descriptionWebView loadHTMLString:descriptionHtmlString baseURL:nil];
 }
 
