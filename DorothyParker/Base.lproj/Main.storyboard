@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--Recipe Table View Controller-->
+        <!--Recipe Table View Controller - Recipes-->
         <scene sceneID="FeG-g3-Lap">
             <objects>
                 <tableViewController id="ABa-fd-pph" customClass="RecipeTableViewController" sceneMemberID="viewController">
@@ -13,13 +13,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="37I-kc-Lad">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="37I-kc-Lad">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="37I-kc-Lad" id="qxy-ke-Jes">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="k02-04-K4u" kind="push" identifier="recipeDetailSegue" id="R2r-cp-4lI"/>
                                 </connections>
@@ -30,7 +31,7 @@
                             <outlet property="delegate" destination="ABa-fd-pph" id="i5R-w0-d19"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="84j-TU-CJw"/>
+                    <navigationItem key="navigationItem" title="Recipes" id="84j-TU-CJw"/>
                     <connections>
                         <outlet property="tableView" destination="GoF-OC-f42" id="xTu-Ay-f09"/>
                     </connections>
@@ -133,7 +134,7 @@
                             <constraint firstAttribute="centerY" secondItem="DcM-Fx-MKR" secondAttribute="centerY" id="lHZ-e8-ii2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Tips" image="second" id="Z7h-1E-pvt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +162,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" image="second" id="X4y-0k-jPS"/>
+                    <tabBarItem key="tabBarItem" title="Dorothy Parker" image="second" id="X4y-0k-jPS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JM3-1I-dMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,7 +190,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fourth" image="first" id="lUx-ez-QnW"/>
+                    <tabBarItem key="tabBarItem" title="Algonquin" image="first" id="lUx-ez-QnW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQU-x8-B9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,7 +218,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Fifth" image="second" id="T9W-hc-6xH"/>
+                    <tabBarItem key="tabBarItem" title="About" image="second" id="T9W-hc-6xH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-Gp-M10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,11 +246,11 @@
             </objects>
             <point key="canvasLocation" x="132" y="180"/>
         </scene>
-        <!--Navigation Controller - First-->
+        <!--Navigation Controller - Recipes-->
         <scene sceneID="ShE-7h-4AF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b2t-MX-NZf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="kXy-n7-fGm"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="first" id="kXy-n7-fGm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0s1-cr-kqj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

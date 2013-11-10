@@ -24,6 +24,8 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor greenColor]];
+    
     [self requestObjects];
 }
 
@@ -122,6 +124,7 @@
     Recipe *recipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = recipe.title;
+    cell.backgroundColor = [UIColor clearColor];
     
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     

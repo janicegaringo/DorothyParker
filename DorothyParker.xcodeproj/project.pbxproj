@@ -125,6 +125,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115EECF2183010C60017858B /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		1EC0671C1811DE6B00003F8E /* Human */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +208,7 @@
 		1EE828C7180D853E0006264E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				115EECF2183010C60017858B /* images */,
 				1EE828C8180D853E0006264E /* DorothyParker-Info.plist */,
 				1EE828C9180D853E0006264E /* InfoPlist.strings */,
 				1EE828CC180D853E0006264E /* main.m */,
@@ -338,7 +346,7 @@
 				ORGANIZATIONNAME = "Janice Garingo";
 				TargetAttributes = {
 					1EE828BC180D853E0006264E = {
-						DevelopmentTeam = 584C88DVV6;
+						DevelopmentTeam = S8GR8JX55G;
 					};
 					1EE828E0180D853E0006264E = {
 						TestTargetID = 1EE828BC180D853E0006264E;
@@ -513,6 +521,7 @@
 		1EC0672618157E8000003F8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -520,6 +529,7 @@
 		1EC0672718157E8000003F8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -541,8 +551,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Janice Garingo (E6QSJX6D7T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Janice Garingo (E6QSJX6D7T)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Janice Garingo (S8GR8JX55G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Janice Garingo (S8GR8JX55G)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -560,6 +570,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3941F451-AACF-4BAB-9488-6FB8B5A95021";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -581,8 +592,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Janice Garingo (E6QSJX6D7T)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Janice Garingo (E6QSJX6D7T)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Janice Garingo (S8GR8JX55G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Janice Garingo (S8GR8JX55G)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -593,6 +604,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "3941F451-AACF-4BAB-9488-6FB8B5A95021";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -604,8 +616,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Janice Garingo (5XQT72AUTL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Janice Garingo (5XQT72AUTL)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DorothyParker/DorothyParker-Prefix.pch";
 				INFOPLIST_FILE = "DorothyParker/DorothyParker-Info.plist";
@@ -621,8 +633,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Janice Garingo (5XQT72AUTL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Janice Garingo (5XQT72AUTL)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DorothyParker/DorothyParker-Prefix.pch";
 				INFOPLIST_FILE = "DorothyParker/DorothyParker-Info.plist";
@@ -637,6 +649,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UnderTheTable.app/UnderTheTable";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -660,6 +673,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UnderTheTable.app/UnderTheTable";
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
