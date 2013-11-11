@@ -28,7 +28,10 @@
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
     
+    [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"novellabold" size:26.0], NSFontAttributeName, nil]];
+    
     [self requestObjects];
+
 }
 
 - (void)requestObjects

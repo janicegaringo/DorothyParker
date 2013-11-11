@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		115EED0B183050CC0017858B /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 115EED09183050CC0017858B /* navbar.png */; };
 		115EED0C183050CC0017858B /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 115EED0A183050CC0017858B /* navbar@2x.png */; };
+		115EED0E183053140017858B /* novellabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 115EED0D183053140017858B /* novellabold.ttf */; };
 		1E3DE96918158E7F00777D09 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96818158E7F00777D09 /* CoreData.framework */; };
 		1E3DE96B1815D9EE00777D09 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */; };
 		1E3DE96D1815DA3600777D09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		115EED09183050CC0017858B /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
 		115EED0A183050CC0017858B /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
+		115EED0D183053140017858B /* novellabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = novellabold.ttf; sourceTree = "<group>"; };
 		1E3DE96818158E7F00777D09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -214,6 +216,7 @@
 		1EE828C7180D853E0006264E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				115EED0D183053140017858B /* novellabold.ttf */,
 				115EECF2183010C60017858B /* images */,
 				1EE828C8180D853E0006264E /* DorothyParker-Info.plist */,
 				1EE828C9180D853E0006264E /* InfoPlist.strings */,
@@ -386,8 +389,9 @@
 			files = (
 				1EE828DC180D853E0006264E /* Images.xcassets in Resources */,
 				1EE82910180DCF7D0006264E /* temp.png in Resources */,
-				1EE828CB180D853E0006264E /* InfoPlist.strings in Resources */,
 				115EED0C183050CC0017858B /* navbar@2x.png in Resources */,
+				1EE828CB180D853E0006264E /* InfoPlist.strings in Resources */,
+				115EED0E183053140017858B /* novellabold.ttf in Resources */,
 				115EED0B183050CC0017858B /* navbar.png in Resources */,
 				1EE828D4180D853E0006264E /* Main.storyboard in Resources */,
 			);
