@@ -102,9 +102,9 @@
 
 # pragma mark - UITableView delegate methods
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"recipeDetailSegue" sender:self.tableView];
+    return 80.0;
 }
 
 
@@ -127,17 +127,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
     
     Recipe *recipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSString *thumbnailURL = [NSString stringWithFormat:@"%@%@", kBaseImageURL, recipe.thumbnail];
     
-    cell.textLabel.text = recipe.title;
+    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+    [recipeImageView setImageWithURL:[NSURL URLWithString:thumbnailURL]];
+    
+    UILabel *textLabel = (UILabel *)[cell viewWithTag:200];
+    textLabel.text = recipe.title;
+    textLabel.font = [UIFont fontWithName:@"Palatino" size:16.0];
+    
     cell.backgroundColor = kUIColorCream;
-    // [cell.imageView setImageWithURL:[NSURL URLWithString:thumbnailURL]];
-        
+    
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;

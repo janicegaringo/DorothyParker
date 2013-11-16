@@ -12,14 +12,10 @@
 
 - (void)viewDidLoad
 {
-    
-    if([UIScreen isRetina])
-    {
+    if([UIScreen isRetina]) {
         [self.thumbnailImageView setImageWithURL:[NSURL URLWithString:self.thumbnailRetina]];
-        
     }
-    else
-    {
+    else {
         [self.thumbnailImageView setImageWithURL:[NSURL URLWithString:self.thumbnail]];
     }
     
