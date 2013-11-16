@@ -22,21 +22,24 @@
 {
     [super viewDidLoad];
     
+    [self styleElements];
+    [self requestObjects];
+}
+
+
+- (void)styleElements
+{
+    self.view.backgroundColor = kUIColorCream;
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.view.backgroundColor = kUIColorCream;
-    
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
-    
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor greenColor]];
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"novellabold" size:26.0], NSFontAttributeName, nil]];
-    
-    [self requestObjects];
-
 }
+
 
 - (void)requestObjects
 {
-    
     [RKMIMETypeSerialization registerClass:[RKNSJSONSerialization class] forMIMEType:@"text/plain"];
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"recipes.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
@@ -46,13 +49,11 @@
     }];
 }
 
+
 - (NSFetchedResultsController *)fetchedResultsController
 {
-    
-
     if(!_fetchedResultsController)
     {
-        
         NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Recipe class])];
         
         fetchRequest.sortDescriptors = @[];
@@ -72,6 +73,7 @@
     return _fetchedResultsController;
 }
 
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:@"recipeDetailSegue"])
@@ -89,12 +91,14 @@
     }
 }
 
+
 # pragma mark - NSFetchedResultsControllerDelegate
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView reloadData];
 }
+
 
 # pragma mark - UITableView delegate methods
 
@@ -103,10 +107,12 @@
     [self performSegueWithIdentifier:@"recipeDetailSegue" sender:self.tableView];
 }
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -117,6 +123,7 @@
     
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"Cell";
@@ -125,10 +132,12 @@
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     
     Recipe *recipe = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSString *thumbnailURL = [NSString stringWithFormat:@"%@%@", kBaseImageURL, recipe.thumbnail];
     
     cell.textLabel.text = recipe.title;
     cell.backgroundColor = kUIColorCream;
-    
+    // [cell.imageView setImageWithURL:[NSURL URLWithString:thumbnailURL]];
+        
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
