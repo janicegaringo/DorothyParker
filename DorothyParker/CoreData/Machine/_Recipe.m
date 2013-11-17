@@ -4,6 +4,7 @@
 #import "_Recipe.h"
 
 const struct RecipeAttributes RecipeAttributes = {
+	.glassware = @"glassware",
 	.ingredients = @"ingredients",
 	.recipedescription = @"recipedescription",
 	.thumbnail = @"thumbnail",
@@ -46,6 +47,13 @@ const struct RecipeFetchedProperties RecipeFetchedProperties = {
 
 	return keyPaths;
 }
+
+
+
+
+@dynamic glassware;
+
+
 
 
 

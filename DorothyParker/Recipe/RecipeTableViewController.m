@@ -29,12 +29,17 @@
 
 - (void)styleElements
 {
-    self.view.backgroundColor = kUIColorCream;
+    self.view.backgroundColor = [UIColor darkGrayColor];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self.navigationController.navigationBar setBackgroundColor:[UIColor greenColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"novellabold" size:26.0], NSFontAttributeName, nil]];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
+    
+    [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                [UIFont fontWithName:@"novellabold" size:26.0], NSFontAttributeName,
+                [UIColor whiteColor],NSForegroundColorAttributeName,
+                nil]];
 }
 
 
@@ -138,12 +143,16 @@
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     [recipeImageView setImageWithURL:[NSURL URLWithString:thumbnailURL]];
+    [recipeImageView.layer setShadowOffset:CGSizeMake(-1.0, -1.0)];
+    [recipeImageView.layer setShadowOpacity:0.5];
     
     UILabel *textLabel = (UILabel *)[cell viewWithTag:200];
     textLabel.text = recipe.title;
+    textLabel.textColor = [UIColor whiteColor];
     textLabel.font = [UIFont fontWithName:@"Palatino" size:16.0];
+    textLabel.numberOfLines = 2;
     
-    cell.backgroundColor = kUIColorCream;
+    cell.backgroundColor = [UIColor darkGrayColor];
     
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     

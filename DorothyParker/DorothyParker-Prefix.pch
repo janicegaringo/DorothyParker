@@ -28,7 +28,6 @@
 #define kBaseImageURL    @"http://www.meladori.com/work/underthetable/images/" 
 
 // Colors
-#define kUIColorCream    [UIColor colorWithRed:0.98 green:0.992 blue:0.965 alpha:1.0] 
-
+#define kUIColorDarkGrey [UIColor colorWithRed:0.145 green:0.145 blue:0.145 alpha:1.0]
 
 

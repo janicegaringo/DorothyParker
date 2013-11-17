@@ -5,6 +5,7 @@
 
 
 extern const struct RecipeAttributes {
+	__unsafe_unretained NSString *glassware;
 	__unsafe_unretained NSString *ingredients;
 	__unsafe_unretained NSString *recipedescription;
 	__unsafe_unretained NSString *thumbnail;
@@ -25,6 +26,7 @@ extern const struct RecipeFetchedProperties {
 
 
 
+
 @interface RecipeID : NSManagedObjectID {}
 @end
 
@@ -33,6 +35,16 @@ extern const struct RecipeFetchedProperties {
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 - (RecipeID*)objectID;
+
+
+
+
+
+@property (nonatomic, strong) NSString* glassware;
+
+
+
+//- (BOOL)validateGlassware:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -96,6 +108,12 @@ extern const struct RecipeFetchedProperties {
 @end
 
 @interface _Recipe (CoreDataGeneratedPrimitiveAccessors)
+
+
+- (NSString*)primitiveGlassware;
+- (void)setPrimitiveGlassware:(NSString*)value;
+
+
 
 
 - (NSString*)primitiveIngredients;
