@@ -27,6 +27,9 @@
 #define kBaseURL         @"http://www.meladori.com/work/underthetable/" 
 #define kBaseImageURL    @"http://www.meladori.com/work/underthetable/images/" 
 
+// Fonts
+#define kNovellaFont     [UIFont fontWithName:@"novellabold" size:26.0]
+
 // Colors
 #define kUIColorDarkGrey [UIColor colorWithRed:0.145 green:0.145 blue:0.145 alpha:1.0]
 

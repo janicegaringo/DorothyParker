@@ -31,14 +31,13 @@
 {
     self.view.backgroundColor = [UIColor darkGrayColor];
 
-    // self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.separatorColor = [UIColor lightGrayColor];
     
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
     
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                [UIFont fontWithName:@"novellabold" size:26.0], NSFontAttributeName,
+                kNovellaFont, NSFontAttributeName,
                 [UIColor whiteColor],NSForegroundColorAttributeName,
                 nil]];
 }
@@ -90,7 +89,9 @@
         Recipe *selectedRecipe = [[self.fetchedResultsController fetchedObjects] objectAtIndex:currentRow];
         
         recipeDetailViewController.recipedescription = selectedRecipe.recipedescription;
-        recipeDetailViewController.ingredients = selectedRecipe.ingredients; 
+        recipeDetailViewController.glassware = selectedRecipe.glassware;
+        recipeDetailViewController.ingredients = selectedRecipe.ingredients;
+        recipeDetailViewController.recipetitle = selectedRecipe.title;
         recipeDetailViewController.thumbnail = [NSString stringWithFormat:@"%@%@", kBaseImageURL, selectedRecipe.thumbnail];
         recipeDetailViewController.thumbnailRetina = [NSString stringWithFormat:@"%@%@", kBaseImageURL, selectedRecipe.thumbnailretina];
         

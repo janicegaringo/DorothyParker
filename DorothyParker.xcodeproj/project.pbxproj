@@ -164,6 +164,14 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		1188640318394161007F7EBC /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				115EED0D183053140017858B /* novellabold.ttf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
 		1EC0671C1811DE6B00003F8E /* Human */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +248,7 @@
 		1EE828C7180D853E0006264E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				115EED0D183053140017858B /* novellabold.ttf */,
+				1188640318394161007F7EBC /* fonts */,
 				115EECF2183010C60017858B /* images */,
 				1EE828C8180D853E0006264E /* DorothyParker-Info.plist */,
 				1EE828C9180D853E0006264E /* InfoPlist.strings */,

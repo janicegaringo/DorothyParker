@@ -10,12 +10,17 @@
 
 @interface RecipeDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSString *ingredients;
-@property (nonatomic, strong) NSString *recipedescription;
-@property (nonatomic, strong) NSString *thumbnail;
-@property (nonatomic, strong) NSString *thumbnailRetina; 
-@property (weak, nonatomic) IBOutlet UIWebView *ingredientsWebView;
-@property (weak, nonatomic) IBOutlet UIWebView *descriptionWebView;
-@property (weak, nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (nonatomic) NSString *ingredients;
+@property (nonatomic) NSString *recipedescription;
+@property (nonatomic) NSString *thumbnail;
+@property (nonatomic) NSString *thumbnailRetina;
+@property (nonatomic) NSString *recipetitle;
+@property (nonatomic) NSString *glassware; 
+
+@property (nonatomic) IBOutlet UIImageView *thumbnailImageView;
+@property (nonatomic) IBOutlet UILabel *glasswareLabel;
+@property (nonatomic) IBOutlet UIWebView *webView;
+
+
 
 @end
