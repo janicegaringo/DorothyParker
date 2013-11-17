@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     [self styleElements];
-    [self requestObjects];
+    // [self requestObjects];
 }
 
 
@@ -31,7 +31,8 @@
 {
     self.view.backgroundColor = [UIColor darkGrayColor];
 
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorColor = [UIColor lightGrayColor];
     
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
@@ -152,6 +153,12 @@
     textLabel.font = [UIFont fontWithName:@"Palatino" size:16.0];
     textLabel.numberOfLines = 2;
     
+    UILabel *glasswareLabel = (UILabel *)[cell viewWithTag:300];
+    glasswareLabel.text = recipe.glassware;
+    glasswareLabel.textColor = [UIColor lightGrayColor];
+    glasswareLabel.font = [UIFont fontWithName:@"Palatino" size:12.0];
+    glasswareLabel.numberOfLines = 1;
+
     cell.backgroundColor = [UIColor darkGrayColor];
     
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
