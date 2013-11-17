@@ -154,7 +154,7 @@
                             <constraint firstAttribute="centerY" secondItem="DcM-Fx-MKR" secondAttribute="centerY" id="lHZ-e8-ii2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tips" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Tips" image="tabbar_tips.png" id="Z7h-1E-pvt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +182,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dorothy Parker" image="second" id="X4y-0k-jPS"/>
+                    <tabBarItem key="tabBarItem" title="Dorothy Parker" image="tabbar_dorothy.png" id="X4y-0k-jPS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JM3-1I-dMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,7 +210,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Algonquin" image="first" id="lUx-ez-QnW"/>
+                    <tabBarItem key="tabBarItem" title="Algonquin" image="tabbar_roundtable.png" id="lUx-ez-QnW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQU-x8-B9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +238,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="second" id="T9W-hc-6xH"/>
+                    <tabBarItem key="tabBarItem" title="About" image="tabbar_about.png" id="T9W-hc-6xH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-Gp-M10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,7 +252,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="b2t-MX-NZf" kind="relationship" relationship="viewControllers" id="g17-Z2-ryl"/>
@@ -270,7 +270,7 @@
         <scene sceneID="ShE-7h-4AF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b2t-MX-NZf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recipes" image="first" id="kXy-n7-fGm"/>
+                    <tabBarItem key="tabBarItem" title="Recipes" image="tabbar_recipes.png" id="kXy-n7-fGm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0s1-cr-kqj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -287,10 +287,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="tabbar_about.png" width="22" height="22"/>
+        <image name="tabbar_dorothy.png" width="22" height="22"/>
+        <image name="tabbar_recipes.png" width="22" height="22"/>
+        <image name="tabbar_roundtable.png" width="22" height="22"/>
+        <image name="tabbar_tips.png" width="22" height="22"/>
         <image name="temp.png" width="150" height="150"/>
     </resources>
+    <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
