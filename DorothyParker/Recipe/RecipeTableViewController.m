@@ -23,7 +23,7 @@
     [super viewDidLoad];
     
     [self styleElements];
-    // [self requestObjects];
+    [self requestObjects];
 }
 
 
@@ -94,6 +94,12 @@
         recipeDetailViewController.recipetitle = selectedRecipe.title;
         recipeDetailViewController.thumbnail = [NSString stringWithFormat:@"%@%@", kBaseImageURL, selectedRecipe.thumbnail];
         recipeDetailViewController.thumbnailRetina = [NSString stringWithFormat:@"%@%@", kBaseImageURL, selectedRecipe.thumbnailretina];
+        
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
+                                       initWithTitle: @""
+                                       style: UIBarButtonItemStylePlain
+                                       target: nil action: nil];
+        [self.navigationItem setBackBarButtonItem: backButton];
         
     }
 }

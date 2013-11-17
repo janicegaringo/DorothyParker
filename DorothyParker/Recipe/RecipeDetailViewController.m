@@ -12,9 +12,13 @@
 
 - (void)viewDidLoad
 {
-    
+    [self setElements];
     [self styleElements];
-    
+}
+
+
+- (void)setElements
+{
     self.navigationItem.title = self.recipetitle;
     
     if([UIScreen isRetina]) {
@@ -24,12 +28,13 @@
         [self.thumbnailImageView setImageWithURL:[NSURL URLWithString:self.thumbnail]];
     }
     
-   self.glasswareLabel.text = [NSString stringWithFormat:@"Glassware: %@", self.glassware];
-
+    self.glasswareLabel.text = [NSString stringWithFormat:@"Glassware: %@", self.glassware];
+    
     NSString *descriptionHtmlString = [NSString stringWithFormat:@"<font color='white'>%@<br><br>%@<br>%@</font>", self.recipedescription, self.recipetitle, self.ingredients];
     
     [self.webView loadHTMLString:descriptionHtmlString baseURL:nil];
 }
+
 
 - (void)styleElements
 {
