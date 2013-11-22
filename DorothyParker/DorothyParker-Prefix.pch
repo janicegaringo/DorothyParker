@@ -17,8 +17,11 @@
 #import <Availability.h>
 #import <AFJSONRequestOperation.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "UIScreen+Retina.h"
 #import <RestKit/RestKit.h>
+
+// Categories
+#import "UIScreen+Retina.h"
+#import "NSData+JSON.h"
 
 // Mogenerator Classes
 #import "Recipe.h"
@@ -26,6 +29,7 @@
 // Constants
 #define kBaseURL         @"http://www.meladori.com/work/underthetable/" 
 #define kBaseImageURL    @"http://www.meladori.com/work/underthetable/images/" 
+#define kDorothyURL      @"http://www.meladori.com/work/underthetable/dorothyparker.json"
 
 // Fonts
 #define kNovellaFont     [UIFont fontWithName:@"novellabold" size:26.0]

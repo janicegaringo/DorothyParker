@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="673" y="-38"/>
         </scene>
-        <!--View Controller - Third-->
+        <!--Dorothy View Controller - Third-->
         <scene sceneID="PmF-tY-fly">
             <objects>
-                <viewController title="Third" id="zUJ-R5-MqQ" sceneMemberID="viewController">
+                <viewController title="Third" id="zUJ-R5-MqQ" customClass="DorothyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ie0-Up-jKR"/>
                         <viewControllerLayoutGuide type="bottom" id="bmO-9q-5wd"/>
