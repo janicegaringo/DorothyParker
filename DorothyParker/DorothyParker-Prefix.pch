@@ -30,7 +30,8 @@
 #define kBaseImageURL    @"http://www.meladori.com/work/underthetable/images/" 
 #define kDorothyURL      @"http://www.meladori.com/work/underthetable/dorothyparker.json"
 #define kTipsURL         @"http://www.meladori.com/work/underthetable/tips.json"
-
+#define kAlgonquinURL    @"http://www.meladori.com/work/underthetable/algonquin.json"
+#define kAboutURL        @"http://www.meladori.com/work/underthetable/about.json"
 
 // Fonts
 #define kNovellaFont     [UIFont fontWithName:@"novellabold" size:26.0]

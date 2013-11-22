@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="1193" y="643"/>
         </scene>
-        <!--View Controller - Fourth-->
+        <!--Algonquin View Controller - Fourth-->
         <scene sceneID="1hX-Kj-Dng">
             <objects>
-                <viewController title="Fourth" id="lwX-WH-5MP" sceneMemberID="viewController">
+                <viewController title="Fourth" id="lwX-WH-5MP" customClass="AlgonquinViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wmh-sM-GHZ"/>
                         <viewControllerLayoutGuide type="bottom" id="8yh-SV-NcN"/>
@@ -186,26 +186,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Fourth View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iC6-Bh-BAY">
-                                <rect key="frame" x="20" y="102" width="280" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tDC-6l-vRG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Algonquin" image="tabbar_roundtable.png" id="lUx-ez-QnW"/>
+                    <navigationItem key="navigationItem" id="cN0-xp-hIB"/>
+                    <connections>
+                        <outlet property="webView" destination="tDC-6l-vRG" id="xKY-OR-dVJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQU-x8-B9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="1313"/>
+            <point key="canvasLocation" x="1199" y="1313"/>
         </scene>
-        <!--View Controller - Fifth-->
+        <!--About View Controller - Fifth-->
         <scene sceneID="JpY-Q9-9KB">
             <objects>
-                <viewController title="Fifth" id="dXa-vZ-Ujh" sceneMemberID="viewController">
+                <viewController title="Fifth" id="dXa-vZ-Ujh" customClass="AboutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hx7-Lq-3xi"/>
                         <viewControllerLayoutGuide type="bottom" id="nBI-33-o61"/>
@@ -214,21 +215,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Fifth View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="s8v-FD-J7N">
-                                <rect key="frame" x="15" y="76" width="280" height="42"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bz0-rc-gdo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="tabbar_about.png" id="T9W-hc-6xH"/>
+                    <navigationItem key="navigationItem" id="f86-IY-Niw"/>
+                    <connections>
+                        <outlet property="webView" destination="bz0-rc-gdo" id="rCv-7r-StF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-Gp-M10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="673" y="1988"/>
+            <point key="canvasLocation" x="1199" y="1988"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -245,8 +247,8 @@
                         <segue destination="b2t-MX-NZf" kind="relationship" relationship="viewControllers" id="g17-Z2-ryl"/>
                         <segue destination="dXp-Aj-K8s" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="fx2-LQ-EEy" kind="relationship" relationship="viewControllers" id="WG1-tL-n8x"/>
-                        <segue destination="lwX-WH-5MP" kind="relationship" relationship="viewControllers" id="BaH-pQ-scA"/>
-                        <segue destination="dXa-vZ-Ujh" kind="relationship" relationship="viewControllers" id="9EI-Cv-Siw"/>
+                        <segue destination="s3O-RI-tAV" kind="relationship" relationship="viewControllers" id="BaH-pQ-scA"/>
+                        <segue destination="tiA-L0-uIa" kind="relationship" relationship="viewControllers" id="9EI-Cv-Siw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -309,6 +311,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBK-0I-IAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="673" y="-38"/>
+        </scene>
+        <!--Navigation Controller - Algonquin-->
+        <scene sceneID="Pyb-st-SNJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s3O-RI-tAV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Algonquin" image="tabbar_roundtable.png" id="lUx-ez-QnW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AWA-xk-yO2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lwX-WH-5MP" kind="relationship" relationship="rootViewController" id="Te4-cZ-TYb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ui-g9-KdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="1313"/>
+        </scene>
+        <!--Navigation Controller - About-->
+        <scene sceneID="h1N-4w-xl6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tiA-L0-uIa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="tabbar_about.png" id="T9W-hc-6xH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ysx-za-mbt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dXa-vZ-Ujh" kind="relationship" relationship="rootViewController" id="VgO-Zg-4ad"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04B-Vt-9bU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="1988"/>
         </scene>
     </scenes>
     <resources>

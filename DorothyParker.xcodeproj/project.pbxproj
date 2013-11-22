@@ -34,6 +34,8 @@
 		1188640218393DFA007F7EBC /* tabbar_tips@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 118863F818393DFA007F7EBC /* tabbar_tips@2x.png */; };
 		11AC53D5183EBF1400ED9F4B /* DorothyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53D4183EBF1400ED9F4B /* DorothyViewController.m */; };
 		11AC53DB183F050700ED9F4B /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53DA183F050700ED9F4B /* TipsViewController.m */; };
+		11AC53DE183F08BC00ED9F4B /* AlgonquinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53DD183F08BC00ED9F4B /* AlgonquinViewController.m */; };
+		11AC53E1183F0F0100ED9F4B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53E0183F0F0100ED9F4B /* AboutViewController.m */; };
 		1E3DE96918158E7F00777D09 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96818158E7F00777D09 /* CoreData.framework */; };
 		1E3DE96B1815D9EE00777D09 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */; };
 		1E3DE96D1815DA3600777D09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */; };
@@ -86,6 +88,10 @@
 		11AC53D4183EBF1400ED9F4B /* DorothyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DorothyViewController.m; path = "Dorothy Parker/DorothyViewController.m"; sourceTree = "<group>"; };
 		11AC53D9183F050700ED9F4B /* TipsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TipsViewController.h; path = Tips/TipsViewController.h; sourceTree = "<group>"; };
 		11AC53DA183F050700ED9F4B /* TipsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TipsViewController.m; path = Tips/TipsViewController.m; sourceTree = "<group>"; };
+		11AC53DC183F08BC00ED9F4B /* AlgonquinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlgonquinViewController.h; path = Algonquin/AlgonquinViewController.h; sourceTree = "<group>"; };
+		11AC53DD183F08BC00ED9F4B /* AlgonquinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlgonquinViewController.m; path = Algonquin/AlgonquinViewController.m; sourceTree = "<group>"; };
+		11AC53DF183F0F0100ED9F4B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = About/AboutViewController.h; sourceTree = "<group>"; };
+		11AC53E0183F0F0100ED9F4B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = About/AboutViewController.m; sourceTree = "<group>"; };
 		1E3DE96818158E7F00777D09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -311,6 +317,8 @@
 		1EE82901180D8EFE0006264E /* Algonquin */ = {
 			isa = PBXGroup;
 			children = (
+				11AC53DC183F08BC00ED9F4B /* AlgonquinViewController.h */,
+				11AC53DD183F08BC00ED9F4B /* AlgonquinViewController.m */,
 			);
 			name = Algonquin;
 			sourceTree = "<group>";
@@ -318,6 +326,8 @@
 		1EE82902180D8F140006264E /* About */ = {
 			isa = PBXGroup;
 			children = (
+				11AC53DF183F0F0100ED9F4B /* AboutViewController.h */,
+				11AC53E0183F0F0100ED9F4B /* AboutViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -518,10 +528,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE8290B180DC8FC0006264E /* RecipeTableViewController.m in Sources */,
+				11AC53DE183F08BC00ED9F4B /* AlgonquinViewController.m in Sources */,
 				1EE8290A180DC8FC0006264E /* RecipeDetailViewController.m in Sources */,
 				1EC067201811E57200003F8E /* Recipe.m in Sources */,
 				1EC067231811E57A00003F8E /* _Recipe.m in Sources */,
 				11AC53DB183F050700ED9F4B /* TipsViewController.m in Sources */,
+				11AC53E1183F0F0100ED9F4B /* AboutViewController.m in Sources */,
 				1EEA2D061811C7C20020A575 /* Model.xcdatamodeld in Sources */,
 				11AC53D5183EBF1400ED9F4B /* DorothyViewController.m in Sources */,
 				1EE828D1180D853E0006264E /* AppDelegate.m in Sources */,
