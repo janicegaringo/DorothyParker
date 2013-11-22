@@ -29,6 +29,11 @@
     
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
+    self.navigationItem.title = @"Dorothy Parker";
+    [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                                      kNovellaFont, NSFontAttributeName,
+                                                                      [UIColor whiteColor],NSForegroundColorAttributeName,
+                                                                      nil]];
     
     [self.webView setBackgroundColor:[UIColor clearColor]];
     [self.webView setOpaque:NO];
