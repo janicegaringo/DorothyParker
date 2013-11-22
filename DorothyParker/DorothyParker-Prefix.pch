@@ -21,7 +21,6 @@
 
 // Categories
 #import "UIScreen+Retina.h"
-#import "NSData+JSON.h"
 
 // Mogenerator Classes
 #import "Recipe.h"

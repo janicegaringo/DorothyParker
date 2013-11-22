@@ -10,4 +10,6 @@
 
 @interface DorothyViewController : UIViewController
 
+@property (nonatomic) IBOutlet UIWebView *webView;
+
 @end
