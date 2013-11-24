@@ -42,13 +42,15 @@
 
 - (void)styleElements
 {
-    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = kUIColorLtGrey;
     
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
+    self.navigationController.navigationBar.barTintColor = kUIColorMedGrey;
     
-    [self.webView setBackgroundColor:kUIColorMedGrey];
-    [self.webView setOpaque:NO];
+    [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                                      kNovellaFont, NSFontAttributeName,
+                                                                      [UIColor whiteColor],NSForegroundColorAttributeName,
+                                                                      nil]];
 }
 
 

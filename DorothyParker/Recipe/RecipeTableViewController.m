@@ -23,18 +23,18 @@
     [super viewDidLoad];
     
     [self styleElements];
-    [self requestObjects];
+    // [self requestObjects];
 }
 
 
 - (void)styleElements
 {
-    self.view.backgroundColor = [UIColor darkGrayColor];
-
+    self.view.backgroundColor = kUIColorLtGrey;
+    
     self.tableView.separatorColor = [UIColor lightGrayColor];
     
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
+    self.navigationController.navigationBar.barTintColor = kUIColorMedGrey;
     
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                 kNovellaFont, NSFontAttributeName,
@@ -153,22 +153,23 @@
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     [recipeImageView setImageWithURL:[NSURL URLWithString:thumbnailURL]];
-    [recipeImageView.layer setShadowOffset:CGSizeMake(-1.0, -1.0)];
-    [recipeImageView.layer setShadowOpacity:0.5];
+//    [recipeImageView.layer setShadowOffset:CGSizeMake(-1.0, -1.0)];
+//    [recipeImageView.layer setShadowOpacity:0.5];
     
     UILabel *textLabel = (UILabel *)[cell viewWithTag:200];
     textLabel.text = recipe.title;
-    textLabel.textColor = [UIColor whiteColor];
+    textLabel.textColor = [UIColor darkGrayColor];
     textLabel.font = [UIFont fontWithName:@"Avenir-Light" size:16.0];
     textLabel.numberOfLines = 2;
     
     UILabel *glasswareLabel = (UILabel *)[cell viewWithTag:300];
     glasswareLabel.text = recipe.glassware;
-    glasswareLabel.textColor = [UIColor lightGrayColor];
+    glasswareLabel.textColor = kUIColorMedGrey;
     glasswareLabel.font = [UIFont fontWithName:@"Avenir-Light" size:12.0];
     glasswareLabel.numberOfLines = 1;
 
-    cell.backgroundColor = [UIColor darkGrayColor];
+    // cell.backgroundColor = [UIColor darkGrayColor];
+    cell.backgroundColor = kUIColorLtGrey;
     
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
