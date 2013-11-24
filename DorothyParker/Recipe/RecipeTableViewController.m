@@ -60,8 +60,10 @@
     if(!_fetchedResultsController)
     {
         NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([Recipe class])];
-        
-        fetchRequest.sortDescriptors = @[];
+                
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]
+                                            initWithKey:@"title" ascending:YES];
+        [fetchRequest setSortDescriptors:@[sortDescriptor]];
         
         self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext sectionNameKeyPath:nil cacheName:nil];
         
