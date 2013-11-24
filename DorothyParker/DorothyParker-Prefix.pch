@@ -41,4 +41,3 @@
 #define kUIColorMedGrey  [UIColor colorWithRed:0.584 green:0.584 blue:0.584 alpha:1.0]
 #define kUIColorLtGrey   [UIColor colorWithRed:0.882 green:0.882 blue:0.882 alpha:1.0]
 
-

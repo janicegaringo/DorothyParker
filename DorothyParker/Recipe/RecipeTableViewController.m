@@ -13,7 +13,7 @@
 
 @property (nonatomic) NSString *imageBaseURL;
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic) NSUInteger isRequested;
+@property (nonatomic) BOOL firstRun;
 
 @end
 
@@ -25,10 +25,20 @@
     
     [self styleElements];
     
-    if(self.isRequested == 0)
-    {
+    NSString *isLoaded = [[NSUserDefaults standardUserDefaults] stringForKey:@"isLoaded"];
+    if([isLoaded isEqualToString:@"YES"]) {
+       // don't do anything if it's loaded
+    }
+    else {
         [self requestObjects];
     }
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
 }
 
 
@@ -54,10 +64,10 @@
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"recipes.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"success");
-        self.isRequested = 1; 
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error : %@" , error);
     }];
+    
 }
 
 
@@ -76,15 +86,20 @@
         NSError *error;
         
         self.fetchedResultsController.delegate = self;
+
+        if(self.fetchedResultsController.fetchedObjects.count == 0) {
         
-        [self.fetchedResultsController performFetch:&error];
-        
+            [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isLoaded"];
+            [self.fetchedResultsController performFetch:&error];
+        }
+
         NSAssert(!error, @"Error performing fetch request: ", error);
         
     }
     
     return _fetchedResultsController;
 }
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -159,8 +174,6 @@
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     [recipeImageView setImageWithURL:[NSURL URLWithString:thumbnailURL]];
-//    [recipeImageView.layer setShadowOffset:CGSizeMake(-1.0, -1.0)];
-//    [recipeImageView.layer setShadowOpacity:0.5];
     
     UILabel *textLabel = (UILabel *)[cell viewWithTag:200];
     textLabel.text = recipe.title;
@@ -174,12 +187,13 @@
     glasswareLabel.font = [UIFont fontWithName:@"Avenir-Light" size:12.0];
     glasswareLabel.numberOfLines = 1;
 
-    // cell.backgroundColor = [UIColor darkGrayColor];
     cell.backgroundColor = kUIColorLtGrey;
     
     cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
+
+
 
 @end
