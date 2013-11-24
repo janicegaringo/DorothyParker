@@ -40,6 +40,7 @@
 		11AC53ED18427EE400ED9F4B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AC53EA18427EE400ED9F4B /* Default-568h@2x.png */; };
 		11AC53EE18427EE400ED9F4B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AC53EB18427EE400ED9F4B /* Default@2x.png */; };
 		11AC53EF18427EE400ED9F4B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AC53EC18427EE400ED9F4B /* Default.png */; };
+		11AC541118428B9000ED9F4B /* webView.html in Resources */ = {isa = PBXBuildFile; fileRef = 11AC541018428B9000ED9F4B /* webView.html */; };
 		1E3DE96918158E7F00777D09 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96818158E7F00777D09 /* CoreData.framework */; };
 		1E3DE96B1815D9EE00777D09 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */; };
 		1E3DE96D1815DA3600777D09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */; };
@@ -100,6 +101,7 @@
 		11AC53EA18427EE400ED9F4B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		11AC53EB18427EE400ED9F4B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		11AC53EC18427EE400ED9F4B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		11AC541018428B9000ED9F4B /* webView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webView.html; sourceTree = "<group>"; };
 		1E3DE96818158E7F00777D09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -267,6 +269,7 @@
 				11AC53EA18427EE400ED9F4B /* Default-568h@2x.png */,
 				11AC53EB18427EE400ED9F4B /* Default@2x.png */,
 				11AC53EC18427EE400ED9F4B /* Default.png */,
+				11AC541018428B9000ED9F4B /* webView.html */,
 				11AC53E21842665800ED9F4B /* recipeWebView.html */,
 				115EED0D183053140017858B /* novellabold.ttf */,
 				1188640318394161007F7EBC /* fonts */,
@@ -450,6 +453,7 @@
 				118863F918393DFA007F7EBC /* tabbar_tips.png in Resources */,
 				1EE82910180DCF7D0006264E /* temp.png in Resources */,
 				118863FD18393DFA007F7EBC /* tabbar_recipes.png in Resources */,
+				11AC541118428B9000ED9F4B /* webView.html in Resources */,
 				118863FB18393DFA007F7EBC /* tabbar_roundtable.png in Resources */,
 				118863FC18393DFA007F7EBC /* tabbar_dorothy.png in Resources */,
 				1EE828CB180D853E0006264E /* InfoPlist.strings in Resources */,
