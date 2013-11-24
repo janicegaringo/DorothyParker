@@ -13,6 +13,7 @@
 
 @property (nonatomic) NSString *imageBaseURL;
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic) NSUInteger isRequested;
 
 @end
 
@@ -23,7 +24,11 @@
     [super viewDidLoad];
     
     [self styleElements];
-    // [self requestObjects];
+    
+    if(self.isRequested == 0)
+    {
+        [self requestObjects];
+    }
 }
 
 
@@ -49,6 +54,7 @@
     
     [[RKObjectManager sharedManager] getObjectsAtPath:@"recipes.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSLog(@"success");
+        self.isRequested = 1; 
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"Error : %@" , error);
     }];

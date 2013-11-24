@@ -26,11 +26,12 @@
 
 - (void)styleView
 {
-    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationController.navigationBar.translucent = NO;
-    self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
-    self.navigationItem.title = @"Algonquin Round Table";
+    self.navigationController.navigationBar.barTintColor = kUIColorMedGrey;
+    
+    self.navigationItem.title = @"The Algonquin Round Table";
     [self.navigationController.navigationBar setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                                       kNovellaFont, NSFontAttributeName,
                                                                       [UIColor whiteColor],NSForegroundColorAttributeName,
@@ -54,8 +55,12 @@
         [data enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             
             NSString *dataLoaded = [obj objectForKey:@"algonquin"];
-            NSString *htmlString = [NSString stringWithFormat:@"<font color='white'>%@</font>", dataLoaded];
-            [self.webView loadHTMLString:htmlString baseURL:nil];
+            NSString *path = [[NSBundle mainBundle] pathForResource: @"webView" ofType: @"html"];
+            NSError *error;
+            NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+            html = [html stringByReplacingOccurrencesOfString:@"<!-- body -->" withString:dataLoaded];
+            
+            [self.webView loadHTMLString:html baseURL:nil];
             
         }];
         
