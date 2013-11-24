@@ -72,43 +72,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temp.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y8o-2Y-7eb">
-                                <rect key="frame" x="10" y="76" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-nY-Aew">
-                                <rect key="frame" x="168" y="77" width="142" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Gna-Hr-Pxi"/>
-                                    <constraint firstAttribute="width" constant="142" id="Qdv-AV-Bmy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="alL-WZ-qGm">
-                                <rect key="frame" x="10" y="236" width="300" height="183"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Y8o-2Y-7eb" firstAttribute="leading" secondItem="LlP-qS-4Fe" secondAttribute="leading" constant="10" id="55m-Ql-fU5"/>
-                            <constraint firstItem="mQ1-1z-r8i" firstAttribute="top" secondItem="alL-WZ-qGm" secondAttribute="bottom" constant="12" id="5Ls-NX-xU6"/>
-                            <constraint firstItem="Awf-nY-Aew" firstAttribute="trailing" secondItem="alL-WZ-qGm" secondAttribute="trailing" id="Q3j-aJ-VQV"/>
-                            <constraint firstItem="alL-WZ-qGm" firstAttribute="top" secondItem="Y8o-2Y-7eb" secondAttribute="bottom" constant="10" id="THK-6z-Imk"/>
-                            <constraint firstItem="Awf-nY-Aew" firstAttribute="leading" secondItem="Y8o-2Y-7eb" secondAttribute="trailing" constant="8" symbolic="YES" id="f8V-6L-f5H"/>
-                            <constraint firstItem="alL-WZ-qGm" firstAttribute="leading" secondItem="Y8o-2Y-7eb" secondAttribute="leading" id="hgh-zg-Wca"/>
-                            <constraint firstItem="Awf-nY-Aew" firstAttribute="top" secondItem="0Np-HX-Nnj" secondAttribute="bottom" constant="13" id="op3-JE-HAT"/>
-                            <constraint firstItem="Y8o-2Y-7eb" firstAttribute="top" secondItem="0Np-HX-Nnj" secondAttribute="bottom" constant="12" id="uwD-1z-vB5"/>
+                            <constraint firstItem="alL-WZ-qGm" firstAttribute="leading" secondItem="LlP-qS-4Fe" secondAttribute="leading" id="6bI-lN-wuN"/>
+                            <constraint firstAttribute="trailing" secondItem="alL-WZ-qGm" secondAttribute="trailing" id="BAC-pb-uBY"/>
+                            <constraint firstItem="alL-WZ-qGm" firstAttribute="top" secondItem="LlP-qS-4Fe" secondAttribute="top" id="hTH-ig-yNv"/>
+                            <constraint firstItem="mQ1-1z-r8i" firstAttribute="top" secondItem="alL-WZ-qGm" secondAttribute="bottom" id="u8f-fc-PML"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VwD-pB-gWh"/>
                     <connections>
-                        <outlet property="glasswareLabel" destination="Awf-nY-Aew" id="eHH-mq-f1i"/>
-                        <outlet property="thumbnailImageView" destination="Y8o-2Y-7eb" id="Dnc-IX-Jd7"/>
                         <outlet property="webView" destination="alL-WZ-qGm" id="wlp-OK-6Rh"/>
                     </connections>
                 </viewController>
@@ -357,7 +336,6 @@
         <image name="tabbar_recipes.png" width="22" height="22"/>
         <image name="tabbar_roundtable.png" width="22" height="22"/>
         <image name="tabbar_tips.png" width="22" height="22"/>
-        <image name="temp.png" width="150" height="150"/>
     </resources>
     <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -17,8 +17,6 @@
 @property (nonatomic) NSString *recipetitle;
 @property (nonatomic) NSString *glassware; 
 
-@property (nonatomic) IBOutlet UIImageView *thumbnailImageView;
-@property (nonatomic) IBOutlet UILabel *glasswareLabel;
 @property (nonatomic) IBOutlet UIWebView *webView;
 
 

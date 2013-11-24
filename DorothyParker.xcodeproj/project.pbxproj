@@ -36,6 +36,7 @@
 		11AC53DB183F050700ED9F4B /* TipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53DA183F050700ED9F4B /* TipsViewController.m */; };
 		11AC53DE183F08BC00ED9F4B /* AlgonquinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53DD183F08BC00ED9F4B /* AlgonquinViewController.m */; };
 		11AC53E1183F0F0100ED9F4B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC53E0183F0F0100ED9F4B /* AboutViewController.m */; };
+		11AC53E31842665800ED9F4B /* recipeWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = 11AC53E21842665800ED9F4B /* recipeWebView.html */; };
 		1E3DE96918158E7F00777D09 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96818158E7F00777D09 /* CoreData.framework */; };
 		1E3DE96B1815D9EE00777D09 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */; };
 		1E3DE96D1815DA3600777D09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */; };
@@ -92,6 +93,7 @@
 		11AC53DD183F08BC00ED9F4B /* AlgonquinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlgonquinViewController.m; path = Algonquin/AlgonquinViewController.m; sourceTree = "<group>"; };
 		11AC53DF183F0F0100ED9F4B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = About/AboutViewController.h; sourceTree = "<group>"; };
 		11AC53E0183F0F0100ED9F4B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = About/AboutViewController.m; sourceTree = "<group>"; };
+		11AC53E21842665800ED9F4B /* recipeWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = recipeWebView.html; sourceTree = "<group>"; };
 		1E3DE96818158E7F00777D09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -176,7 +178,6 @@
 		1188640318394161007F7EBC /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				115EED0D183053140017858B /* novellabold.ttf */,
 			);
 			name = fonts;
 			sourceTree = "<group>";
@@ -257,6 +258,8 @@
 		1EE828C7180D853E0006264E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11AC53E21842665800ED9F4B /* recipeWebView.html */,
+				115EED0D183053140017858B /* novellabold.ttf */,
 				1188640318394161007F7EBC /* fonts */,
 				115EECF2183010C60017858B /* images */,
 				1EE828C8180D853E0006264E /* DorothyParker-Info.plist */,
@@ -442,6 +445,7 @@
 				118863FC18393DFA007F7EBC /* tabbar_dorothy.png in Resources */,
 				1EE828CB180D853E0006264E /* InfoPlist.strings in Resources */,
 				115EED0E183053140017858B /* novellabold.ttf in Resources */,
+				11AC53E31842665800ED9F4B /* recipeWebView.html in Resources */,
 				118863FA18393DFA007F7EBC /* tabbar_about.png in Resources */,
 				1EE828D4180D853E0006264E /* Main.storyboard in Resources */,
 				1188640218393DFA007F7EBC /* tabbar_tips@2x.png in Resources */,
