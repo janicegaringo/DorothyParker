@@ -157,13 +157,13 @@
     UILabel *textLabel = (UILabel *)[cell viewWithTag:200];
     textLabel.text = recipe.title;
     textLabel.textColor = [UIColor whiteColor];
-    textLabel.font = [UIFont fontWithName:@"Palatino" size:16.0];
+    textLabel.font = [UIFont fontWithName:@"Avenir-Light" size:16.0];
     textLabel.numberOfLines = 2;
     
     UILabel *glasswareLabel = (UILabel *)[cell viewWithTag:300];
     glasswareLabel.text = recipe.glassware;
     glasswareLabel.textColor = [UIColor lightGrayColor];
-    glasswareLabel.font = [UIFont fontWithName:@"Palatino" size:12.0];
+    glasswareLabel.font = [UIFont fontWithName:@"Avenir-Light" size:12.0];
     glasswareLabel.numberOfLines = 1;
 
     cell.backgroundColor = [UIColor darkGrayColor];

@@ -21,15 +21,6 @@
 {
     self.navigationItem.title = self.recipetitle;
     
-  
-
-    
-    //
-//    self.glasswareLabel.text = [NSString stringWithFormat:@"Glassware: %@", self.glassware];
-    
-//    NSString *descriptionHtmlString = [NSString stringWithFormat:@"<font color='white'>%@<br><br>%@<br>%@</font>", self.recipedescription, self.recipetitle, self.ingredients];
-
-    
     NSString *path = [[NSBundle mainBundle] pathForResource: @"recipeWebView" ofType: @"html"];
     NSError *error;
     NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
@@ -56,15 +47,8 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.barTintColor = kUIColorDarkGrey;
     
-//    [self.glasswareLabel setFont:[UIFont fontWithName:@"Palatino" size:16.0]];
-//    self.glasswareLabel.numberOfLines = 2;
-//    
-//    [self.thumbnailImageView.layer setShadowOffset:CGSizeMake(-1.0, -1.0)];
-//    [self.thumbnailImageView.layer setShadowOpacity:0.5];
-    
-      [self.webView setBackgroundColor:kUIColorMedGrey];
-      [self.webView setOpaque:NO];
-    
+    [self.webView setBackgroundColor:kUIColorMedGrey];
+    [self.webView setOpaque:NO];
 }
 
 
