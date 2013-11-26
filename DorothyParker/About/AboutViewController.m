@@ -7,6 +7,7 @@
 //
 
 #import "AboutViewController.h"
+#import "AboutLinkViewController.h"
 
 @interface AboutViewController ()
 
@@ -22,6 +23,13 @@
     
     [self loadJson];
     [self styleView];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self loadJson];
 }
 
 
@@ -89,15 +97,34 @@
 {
     
     NSLog(@"request : %@", request);
+    
+	if(navigationType == UIWebViewNavigationTypeLinkClicked) {
+    
+        NSLog(@"clicked...");
+        
+        // segueToWebView
+        
+//        AboutLinkViewController *aboutLinkViewController = [[AboutLinkViewController alloc] init];
+        
+        // do any setup you need for myNewVC
+       
+        [self performSegueWithIdentifier:@"segueToWebView" sender:self];
 
-//	if(navigationType == UIWebViewNavigationTypeLinkClicked) {
-//    
-//        NSLog(@"request : %@", request);
-//        
-//    }
+        
+
+        
+    }
     
     return YES;
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"segueToWebView"])
+    {
+    
+    }
 }
 
 

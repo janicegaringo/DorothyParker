@@ -43,6 +43,7 @@
 		11AC541118428B9000ED9F4B /* webView.html in Resources */ = {isa = PBXBuildFile; fileRef = 11AC541018428B9000ED9F4B /* webView.html */; };
 		11AC54131845313300ED9F4B /* webViewPlain.html in Resources */ = {isa = PBXBuildFile; fileRef = 11AC54121845313300ED9F4B /* webViewPlain.html */; };
 		11AC54151845350900ED9F4B /* webViewAbout.html in Resources */ = {isa = PBXBuildFile; fileRef = 11AC54141845350900ED9F4B /* webViewAbout.html */; };
+		11AC541818453E4000ED9F4B /* AboutLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC541718453E4000ED9F4B /* AboutLinkViewController.m */; };
 		1E3DE96918158E7F00777D09 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96818158E7F00777D09 /* CoreData.framework */; };
 		1E3DE96B1815D9EE00777D09 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */; };
 		1E3DE96D1815DA3600777D09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */; };
@@ -106,6 +107,8 @@
 		11AC541018428B9000ED9F4B /* webView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webView.html; sourceTree = "<group>"; };
 		11AC54121845313300ED9F4B /* webViewPlain.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webViewPlain.html; sourceTree = "<group>"; };
 		11AC54141845350900ED9F4B /* webViewAbout.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = webViewAbout.html; sourceTree = "<group>"; };
+		11AC541618453E4000ED9F4B /* AboutLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutLinkViewController.h; path = About/AboutLinkViewController.h; sourceTree = "<group>"; };
+		11AC541718453E4000ED9F4B /* AboutLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutLinkViewController.m; path = About/AboutLinkViewController.m; sourceTree = "<group>"; };
 		1E3DE96818158E7F00777D09 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E3DE96A1815D9EE00777D09 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1E3DE96C1815DA3600777D09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -349,6 +352,8 @@
 			children = (
 				11AC53DF183F0F0100ED9F4B /* AboutViewController.h */,
 				11AC53E0183F0F0100ED9F4B /* AboutViewController.m */,
+				11AC541618453E4000ED9F4B /* AboutLinkViewController.h */,
+				11AC541718453E4000ED9F4B /* AboutLinkViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				1EC067231811E57A00003F8E /* _Recipe.m in Sources */,
 				11AC53DB183F050700ED9F4B /* TipsViewController.m in Sources */,
 				11AC53E1183F0F0100ED9F4B /* AboutViewController.m in Sources */,
+				11AC541818453E4000ED9F4B /* AboutLinkViewController.m in Sources */,
 				1EEA2D061811C7C20020A575 /* Model.xcdatamodeld in Sources */,
 				11AC53D5183EBF1400ED9F4B /* DorothyViewController.m in Sources */,
 				1EE828D1180D853E0006264E /* AppDelegate.m in Sources */,

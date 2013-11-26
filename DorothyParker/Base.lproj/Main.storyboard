@@ -205,11 +205,40 @@
                     <navigationItem key="navigationItem" id="f86-IY-Niw"/>
                     <connections>
                         <outlet property="webView" destination="bz0-rc-gdo" id="rCv-7r-StF"/>
+                        <segue destination="Srg-kP-rAl" kind="push" identifier="segueToWebView" id="Cyy-jH-79U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxt-Gp-M10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1199" y="1988"/>
+        </scene>
+        <!--About Link View Controller-->
+        <scene sceneID="uY3-uM-kpE">
+            <objects>
+                <viewController id="Srg-kP-rAl" customClass="AboutLinkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A2b-bR-ixT"/>
+                        <viewControllerLayoutGuide type="bottom" id="oHi-iG-sLo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNa-O0-AOw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V1-6B-gGw">
+                                <rect key="frame" x="70" y="138" width="173" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6un-jY-kWf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohf-jE-cOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731" y="1988"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
