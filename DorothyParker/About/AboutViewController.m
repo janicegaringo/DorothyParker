@@ -11,6 +11,8 @@
 
 @interface AboutViewController ()
 
+@property (nonatomic) NSString *urlToLoad;
+
 @end
 
 @implementation AboutViewController
@@ -95,34 +97,22 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    
-    NSLog(@"request : %@", request);
-    
 	if(navigationType == UIWebViewNavigationTypeLinkClicked) {
-    
-        NSLog(@"clicked...");
-        
-        // segueToWebView
-        
-//        AboutLinkViewController *aboutLinkViewController = [[AboutLinkViewController alloc] init];
-        
-        // do any setup you need for myNewVC
-       
+        self.urlToLoad = [[request URL] absoluteString];
         [self performSegueWithIdentifier:@"segueToWebView" sender:self];
-
-        
-
-        
     }
     
     return YES;
-    
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:@"segueToWebView"])
     {
+        AboutLinkViewController *aboutLinkViewController = [segue destinationViewController];
+
+        aboutLinkViewController.urlToLoad = self.urlToLoad;
     
     }
 }

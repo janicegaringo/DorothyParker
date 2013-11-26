@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="1199" y="1988"/>
         </scene>
-        <!--About Link View Controller-->
+        <!--About Link View Controller - AboutLinkViewController-->
         <scene sceneID="uY3-uM-kpE">
             <objects>
-                <viewController id="Srg-kP-rAl" customClass="AboutLinkViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutLinkViewController" title="AboutLinkViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Srg-kP-rAl" customClass="AboutLinkViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="A2b-bR-ixT"/>
                         <viewControllerLayoutGuide type="bottom" id="oHi-iG-sLo"/>
@@ -224,17 +224,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V1-6B-gGw">
-                                <rect key="frame" x="70" y="138" width="173" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qux-qS-b3Y">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6un-jY-kWf"/>
+                    <connections>
+                        <outlet property="webView" destination="qux-qS-b3Y" id="DK9-f1-hTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohf-jE-cOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

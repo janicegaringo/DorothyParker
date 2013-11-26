@@ -14,16 +14,21 @@
 
 @implementation AboutLinkViewController
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"loading: self.urlToLoad : %@", self.urlToLoad);
+    
+   // [self.webView loadHTMLString:self.urlToLoad baseURL:nil];
+
+   // [self.webView loadHTMLString:@"http://www.amazon.com/exec/obidos/ASIN/076279268X/dorothparkersnew" baseURL:nil];
+    
+    NSURL *urlToLoad = [NSURL URLWithString:self.urlToLoad];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:urlToLoad];
+    [self.webView loadRequest:urlRequest];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

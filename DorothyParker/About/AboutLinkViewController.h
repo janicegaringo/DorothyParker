@@ -10,4 +10,7 @@
 
 @interface AboutLinkViewController : UIViewController
 
+@property (nonatomic) IBOutlet UIWebView *webView;
+@property (nonatomic) NSString *urlToLoad;
+
 @end
