@@ -55,7 +55,7 @@
         [data enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             
             NSString *dataLoaded = [obj objectForKey:@"tips"];
-            NSString *path = [[NSBundle mainBundle] pathForResource: @"webView" ofType: @"html"];
+            NSString *path = [[NSBundle mainBundle] pathForResource: @"webViewPlain" ofType: @"html"];
             NSError *error;
             NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
             html = [html stringByReplacingOccurrencesOfString:@"<!-- body -->" withString:dataLoaded];

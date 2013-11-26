@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.webView.delegate = self;
     
     [self loadJson];
     [self styleView];
@@ -55,12 +56,23 @@
         [data enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             
             NSString *dataLoaded = [obj objectForKey:@"about"];
-            NSString *path = [[NSBundle mainBundle] pathForResource: @"webView" ofType: @"html"];
+            NSString *thumbnail = [NSString stringWithFormat:@"%@%@", kBaseImageURL, [obj objectForKey:@"thumbnail"]];
+            NSString *thumbnailRetina = [NSString stringWithFormat:@"%@%@", kBaseImageURL, [obj objectForKey:@"thumbnail-retina"]];
+            
+            NSString *path = [[NSBundle mainBundle] pathForResource: @"webViewAbout" ofType: @"html"];
             NSError *error;
             NSString *html = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
             html = [html stringByReplacingOccurrencesOfString:@"<!-- body -->" withString:dataLoaded];
             
+            if([UIScreen isRetina]) {
+                html = [html stringByReplacingOccurrencesOfString:@"<!-- image -->" withString:thumbnailRetina];
+            }
+            else {
+                html = [html stringByReplacingOccurrencesOfString:@"<!-- image -->" withString:thumbnail];
+            }
+            
             [self.webView loadHTMLString:html baseURL:nil];
+            
         }];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
@@ -71,5 +83,22 @@
     [operation start];
     
 }
+
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    
+    NSLog(@"request : %@", request);
+
+//	if(navigationType == UIWebViewNavigationTypeLinkClicked) {
+//    
+//        NSLog(@"request : %@", request);
+//        
+//    }
+    
+    return YES;
+    
+}
+
 
 @end
