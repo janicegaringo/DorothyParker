@@ -89,11 +89,30 @@
                     <navigationItem key="navigationItem" id="VwD-pB-gWh"/>
                     <connections>
                         <outlet property="webView" destination="alL-WZ-qGm" id="wlp-OK-6Rh"/>
+                        <segue destination="0Mr-TZ-Rov" kind="push" identifier="recipeWebViewSegue" id="F6o-Jj-Hn6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pf-JR-JAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1572" y="-707"/>
+        </scene>
+        <!--Recipe Web View Controller-->
+        <scene sceneID="EcV-0S-sxC">
+            <objects>
+                <viewController id="0Mr-TZ-Rov" customClass="RecipeWebViewController" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="hT3-57-xpa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </webView>
+                    <navigationItem key="navigationItem" id="yLg-W7-SFu"/>
+                    <connections>
+                        <outlet property="webView" destination="hT3-57-xpa" id="eHm-uN-I2l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAz-Si-XFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="-707"/>
         </scene>
         <!--Tips View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">

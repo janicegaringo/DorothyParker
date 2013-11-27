@@ -1,18 +1,18 @@
 //
-//  AboutLinkViewController.m
+//  RecipeWebViewController.m
 //  DorothyParker
 //
-//  Created by Janice Garingo on 11/26/13.
+//  Created by Janice Garingo on 11/27/13.
 //  Copyright (c) 2013 Janice Garingo. All rights reserved.
 //
 
-#import "AboutLinkViewController.h"
+#import "RecipeWebViewController.h"
 
-@interface AboutLinkViewController ()
+@interface RecipeWebViewController ()
 
 @end
 
-@implementation AboutLinkViewController
+@implementation RecipeWebViewController
 
 - (void)viewDidLoad
 {

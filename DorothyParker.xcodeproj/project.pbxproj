@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		113CF13318465F4C00FDAAAA /* RecipeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113CF13218465F4C00FDAAAA /* RecipeWebViewController.m */; };
 		115EED0E183053140017858B /* novellabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 115EED0D183053140017858B /* novellabold.ttf */; };
 		118863F918393DFA007F7EBC /* tabbar_tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 118863EF18393DFA007F7EBC /* tabbar_tips.png */; };
 		118863FA18393DFA007F7EBC /* tabbar_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 118863F018393DFA007F7EBC /* tabbar_about.png */; };
@@ -81,6 +82,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		113CF13118465F4C00FDAAAA /* RecipeWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeWebViewController.h; path = Recipe/RecipeWebViewController.h; sourceTree = "<group>"; };
+		113CF13218465F4C00FDAAAA /* RecipeWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeWebViewController.m; path = Recipe/RecipeWebViewController.m; sourceTree = "<group>"; };
 		115EED0D183053140017858B /* novellabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = novellabold.ttf; sourceTree = "<group>"; };
 		118863EF18393DFA007F7EBC /* tabbar_tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_tips.png; path = images/tabbar_tips.png; sourceTree = "<group>"; };
 		118863F018393DFA007F7EBC /* tabbar_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabbar_about.png; path = images/tabbar_about.png; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 				1EE82907180DC8FC0006264E /* RecipeDetailViewController.m */,
 				1EE82908180DC8FC0006264E /* RecipeTableViewController.h */,
 				1EE82909180DC8FC0006264E /* RecipeTableViewController.m */,
+				113CF13118465F4C00FDAAAA /* RecipeWebViewController.h */,
+				113CF13218465F4C00FDAAAA /* RecipeWebViewController.m */,
 			);
 			name = Recipe;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				1EE8290A180DC8FC0006264E /* RecipeDetailViewController.m in Sources */,
 				1EC067201811E57200003F8E /* Recipe.m in Sources */,
 				1EC067231811E57A00003F8E /* _Recipe.m in Sources */,
+				113CF13318465F4C00FDAAAA /* RecipeWebViewController.m in Sources */,
 				11AC53DB183F050700ED9F4B /* TipsViewController.m in Sources */,
 				11AC53E1183F0F0100ED9F4B /* AboutViewController.m in Sources */,
 				11AC541818453E4000ED9F4B /* AboutLinkViewController.m in Sources */,
