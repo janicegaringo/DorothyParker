@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecipeDetailViewController : UIViewController
+@interface RecipeDetailViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic) NSString *ingredients;
 @property (nonatomic) NSString *recipedescription;

@@ -32,6 +32,11 @@
 #define kTipsURL         @"http://www.meladori.com/work/underthetable/tips.json"
 #define kAlgonquinURL    @"http://www.meladori.com/work/underthetable/algonquin.json"
 #define kAboutURL        @"http://www.meladori.com/work/underthetable/about.json"
+#define kDorothyLink     @"http://www.amazon.com/exec/obidos/ASIN/076279268X/dorothparkersnew"
+#define kBarnesNobleLink @"http://www.barnesandnoble.com/w/under-the-table-kevin-c-fitzpatrick/1114831061"
+#define kIndieLink       @"http://www.indiebound.org/book/9780762792689"
+#define kPowellsLink     @"http://www.powells.com/biblio/1-9780762792689-0"
+
 
 // Fonts
 #define kNovellaFont     [UIFont fontWithName:@"novellabold" size:26.0]

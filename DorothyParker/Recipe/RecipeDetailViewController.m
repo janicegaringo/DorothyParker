@@ -7,6 +7,13 @@
 //
 
 #import "RecipeDetailViewController.h"
+#import "RecipeWebViewController.h"
+
+@interface RecipeDetailViewController ()
+
+@property (nonatomic) NSString *urlToLoad;
+
+@end
 
 @implementation RecipeDetailViewController
 
@@ -14,6 +21,15 @@
 {
     [self setElements];
     [self styleElements];
+    
+    self.webView.delegate = self;
+}
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setElements];
 }
 
 
@@ -53,6 +69,36 @@
                                                                       nil]];
 }
 
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    
+    NSString *requestString = [[request URL] absoluteString];
+    NSUInteger isValidLink = 0;
+    
+    if([requestString isEqualToString:kDorothyLink] || [requestString isEqualToString:kIndieLink] || [requestString isEqualToString:kBarnesNobleLink] || [requestString isEqualToString:kPowellsLink])
+    {
+        isValidLink = 1;
+    }
+    
+    if((navigationType == UIWebViewNavigationTypeLinkClicked) && isValidLink)
+    {
+        self.urlToLoad = [[request URL] absoluteString];
+        [self performSegueWithIdentifier:@"recipeWebViewSegue" sender:self];
+    }
+
+    return YES;
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"recipeWebViewSegue"])
+    {
+        RecipeWebViewController *recipeWebViewController = [segue destinationViewController];
+        recipeWebViewController.urlToLoad = self.urlToLoad;
+    }
+}
 
 @end
 
