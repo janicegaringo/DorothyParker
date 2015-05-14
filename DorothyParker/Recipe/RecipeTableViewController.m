@@ -19,6 +19,8 @@
 
 @implementation RecipeTableViewController
 
+@dynamic tableView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
